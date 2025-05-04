@@ -1,0 +1,154 @@
+body[data-theme="dark"] {
+  @import url("../dark-slider.scss");
+
+  .container-back {
+    background: #474747;
+    background: linear-gradient(
+      212deg,
+      rgba(71, 71, 71, 1) 0%,
+      rgba(0, 8, 5, 1) 69%
+    );
+  }
+
+  .slider-tab {
+    background-color: #8c8c8c;
+  }
+
+  .title-styles {
+    color: white;
+  }
+
+  .header-icon {
+    color: #3f4769;
+    opacity: 0.8;
+  }
+
+  .slider-image {
+    border: 5px solid #8c8c8c;
+  }
+
+  .link-href {
+    color: white;
+  }
+
+  .project-date {
+    background-color: #918e97;
+    color: white;
+  }
+
+  header {
+    h1 {
+      color: white;
+    }
+  }
+
+  .skills-text {
+    color: white;
+  }
+
+  .skills-title {
+    background-color: #696969;
+    color: #fff;
+    box-shadow: 3px 3px 8px 0px rgba(255,255,255,0.75);
+    -webkit-box-shadow: 3px 3px 8px 0px rgba(255,255,255,0.75);
+    -moz-box-shadow: 3px 3px 8px 0px rgba(255,255,255,0.75);
+  }
+
+  #about {
+    h1 span {
+      color: white;
+    }
+    .polaroid span {
+      background: #6d6d6d;
+      -webkit-box-shadow: -1px 5px 20px 5px rgba(255, 254, 250, 0.53);
+      box-shadow: -1px 5px 20px 5px rgba(255, 254, 250, 0.53);
+    }
+    .card {
+      background: #6d6d6d;
+      color: white;
+      box-shadow: 3px 3px 8px 0px rgba(255,255,255,0.75);
+      -webkit-box-shadow: 3px 3px 8px 0px rgba(255,255,255,0.75);
+      -moz-box-shadow: 3px 3px 8px 0px rgba(255,255,255,0.75);
+    }
+  }
+
+  #projects {
+    .section-title {
+      color: white !important;
+    }
+    .foto div {
+      background: #6d6d6d;
+      box-shadow: 3px 3px 8px 0px rgba(255,255,255,0.75);
+      -webkit-box-shadow: 3px 3px 8px 0px rgba(255,255,255,0.75);
+      -moz-box-shadow: 3px 3px 8px 0px rgba(255,255,255,0.75);
+    }
+    .project-title-settings {
+      color: white;
+    }
+  }
+
+  #resume {
+    filter: brightness(80%);
+    background: #5b5b5b;
+    .section-title {
+      color: white !important;
+    }
+
+    .experience-badge {
+      background: #919191 !important;
+      color: white;
+    }
+
+    .main-badge {
+      background: #919191 !important;
+    }
+
+    .vertical-timeline-element-date {
+      color: white;
+    }
+
+    .vertical-timeline-element-icon {
+      background: #919191 !important;
+    }
+    @media only screen and (max-width: 1169px) {
+      .vertical-timeline-element-date {
+        color: black;
+      }
+    }
+  }
+
+  .modal-inside .modal-content {
+    background: #5b5b5b;
+    color: white;
+  }
+
+  .close-icon {
+    color: white;
+  }
+
+  .fixed-header li a {
+    color: #fff !important;
+    background: transparent;
+  }
+  
+  .fixed-header li a:hover {
+    background: #6e6e6e;
+    color: #fff !important;
+  }
+
+  .social-links span a i {
+    margin-top: 50px;
+    font-size: 22px;
+    color: #fff;
+  }
+  
+  .info-footer {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .underline {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 2px;
+  }
+}

@@ -1,0 +1,18 @@
+body[data-theme="light"] {
+  @import url("../light-slider.scss");
+
+  .slider-tab {
+    background-color: #d7caaa;
+  }
+
+  .social-links span a i {
+    margin-top: 50px;
+    font-size: 22px;
+    color: #000;
+  }
+  
+  .info-footer {
+    color: #000;
+    font-weight: 700;
+  }
+}

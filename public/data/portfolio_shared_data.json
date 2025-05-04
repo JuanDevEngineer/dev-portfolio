@@ -1,0 +1,83 @@
+{
+  "basic_info": {
+    "name": "Juan Jose Restrepo Cuadros",
+    "titles": [
+      "Javascript Developer",
+      "Analyst Developer",
+      "PHP Developer",
+      "React Native Developer"
+    ],
+    "social": [
+      {
+        "name": "github",
+        "url": "https://github.com",
+        "class": "fab fa-github"
+      },
+      {
+        "name": "instagram",
+        "url": "https://www.instagram.com",
+        "class": "fab fa-instagram"
+      }
+    ],
+    "image": "myProfile.jpg"
+  },
+  "skills": {
+    "icons": [
+      {
+        "name": "HTML 5",
+        "class": "logos:html-5",
+        "level": "95"
+      },
+      {
+        "name": "CSS 3",
+        "class": "logos:css-3",
+        "level": "95"
+      },
+      {
+        "name": "React",
+        "class": "logos:react",
+        "level": "80"
+      },
+      {
+        "name": "TypeScript",
+        "class": "devicon:typescript",
+        "level": "90"
+      },
+      {
+        "name": "JavaScript",
+        "class": "devicon:javascript",
+        "level": "70"
+      },
+      {
+        "name": "Sass",
+        "class": "devicon:sass",
+        "level": "75"
+      },
+      {
+        "name": "Bootstrap",
+        "class": "devicon:bootstrap",
+        "level": "85"
+      },
+      {
+        "name": "Java",
+        "class": "devicon:java",
+        "level": "65"
+      },
+      {
+        "name": "MySql",
+        "class": "logos:mysql-icon",
+        "level": "60"
+      },
+      {
+        "name": "Php",
+        "class": "devicon:php",
+        "level": "60"
+      },
+      {
+        "name": "Nextjs",
+        "class": "devicon:nextjs",
+        "level": "60"
+      }
+    ]
+  }
+}
