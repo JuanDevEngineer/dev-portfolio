@@ -21,16 +21,16 @@
       "url": "",
       "technologies": [
         {
-          "class": "devicon-angularjs-plain",
-          "name": "Angular"
+          "class": "devicon-react-original",
+          "name": "React"
         },
         {
           "class": "devicon-typescript-plain",
           "name": "TypeScript"
         },
         {
-          "class": "devicon-csharp-plain",
-          "name": "C#"
+          "class": "devicon-nodejs-plain",
+          "name": "Nodejs"
         }
       ]
     },
@@ -65,16 +65,16 @@
       "url": "https://github.com",
       "technologies": [
         {
-          "class": "devicon-angularjs-plain",
-          "name": "Angular"
+          "class": "devicon-nextjs-plain",
+          "name": "Nextjs"
         },
         {
           "class": "devicon-typescript-plain",
           "name": "TypeScript"
         },
         {
-          "class": "devicon-csharp-plain",
-          "name": "C#"
+          "class": "devicon-nodejs-plain",
+          "name": "Nodejs"
         }
       ]
     }
