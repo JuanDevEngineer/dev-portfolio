@@ -1,9 +1,19 @@
 import { FC } from "react";
 import { Icon } from "@iconify/react";
+import { BasicInfo } from "../types";
 
 interface AboutProps {
-  sharedBasicInfo: any;
-  resumeBasicInfo: any;
+  sharedBasicInfo?: BasicInfo;
+  resumeBasicInfo?: {
+    "description_header": string,
+    "description": string,
+    "section_name": {
+        "about": string,
+        "projects": string,
+        "skills": string,
+        "experience": string
+    }
+  } 
 }
 
 const About: FC<AboutProps> = ({ sharedBasicInfo, resumeBasicInfo }) => {

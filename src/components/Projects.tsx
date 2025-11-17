@@ -1,12 +1,44 @@
 import { useState } from "react";
 import { ProjectDetailsModal } from "./ProjectDetailsModal";
 
-const Projects = ({ resumeProjects, resumeBasicInfo }) => {
-  const [deps, setDeps] = useState({});
+interface ProyectsProps {
+  resumeProjects?: {
+    title:        string;
+    startDate:    string;
+    description:  string;
+    images:       string[];
+    url:          string;
+    technologies: {
+      class: string;
+      name:  string;
+    }[];
+  }[];
+  resumeBasicInfo?: {
+    "description_header": string,
+    "description": string,
+    "section_name": {
+        "about": string,
+        "projects": string,
+        "skills": string,
+        "experience": string
+    }
+  };
+}
+
+type ProjectData = {
+  title: string;
+  description: string;
+  url?: string;
+  technologies?: { class: string; name: string }[];
+  images?: string[];
+} | undefined;
+
+const Projects = ({ resumeProjects, resumeBasicInfo }: ProyectsProps) => {
+
+  const [deps, setDeps] = useState<ProjectData>(undefined);
   const [detailsModalShow, setDetailsModalShow] = useState<boolean>(false);
 
-  const handleDetailsModalShow = (data) => {
-    console.log(data)
+  const handleDetailsModalShow = (data: ProjectData) => {
     setDeps(data);
     setDetailsModalShow(true);
   };

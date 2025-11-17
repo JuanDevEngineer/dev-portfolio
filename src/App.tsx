@@ -1,6 +1,4 @@
 import { useState, useCallback, useEffect, lazy, Suspense } from "react";
-import { Icon } from "@iconify/react";
-import ReactSwitch from "react-switch";
 
 import { ParticlesBackground } from "./components/ui/ParticlesBackground";
 
@@ -10,12 +8,13 @@ import { Lang } from "./types/lang";
 import useScrollTop from "./hooks/useScrollTop";
 import useAppStore from "./store/useAppStore";
 
-import "./App.scss";
-import FixedHeader from "./components/FixedHheader";
+import FixedHeader from "./components/ui/FixedHheader";
 import Loader from "./components/ui/Loader";
-import Footer from "./components/Footer";
+import Footer from "./components/ui/Footer";
 
-const Header = lazy(() => import("./components/Header"));
+import "./App.scss";
+
+const Header = lazy(() => import("./components/ui/Header"));
 const About = lazy(() => import("./components/About"));
 const Projects = lazy(() => import("./components/Projects"));
 const Skills = lazy(() => import("./components/Skills"));
@@ -92,8 +91,6 @@ const App = () => {
         oppositeLangIconId === languageIconId
           ? "primary-lang-icon"
           : "secondary-lang-icon";
-      // document?.getElementById(oppositeLangIconId)?.removeAttribute("filter");
-      // document?.getElementById(pickedLangIconId)?.setAttribute("filter", "brightness(40%)");
       document?.querySelectorAll(`#${oppositeLangIconId}`)?.forEach((el) => {
         el.removeAttribute("filter");
       });
@@ -124,7 +121,6 @@ const App = () => {
     const newTheme = currentTheme === "dark" ? "light" : "dark";
     body.setAttribute(dataThemeAttribute, newTheme);
     setThemeApp(newTheme); // Actualiza el estado global de tu aplicación
-    // Guardar el tema en localStorage
     localStorage.setItem("theme", newTheme);
   };
 
@@ -133,20 +129,20 @@ const App = () => {
   return (
     <div className="container-back">
       <Suspense fallback={<Loader />}>
+        
         <ParticlesBackground />
-
-        {/* Sticky Menu */}
+        
         <FixedHeader
+          resumeData={resumeData?.menu}
           scroll={scroll}
           onThemeSwitchChange={onThemeSwitchChange}
           applyPickedLanguage={applyPickedLanguage}
         />
         <Header
-          sharedData={sharedData?.basic_info ?? {}}
+          sharedData={sharedData?.basic_info}
           applyPickedLanguage={applyPickedLanguage}
           changeThme={setTheme}
         />
-
         <About
           resumeBasicInfo={resumeData?.basic_info}
           sharedBasicInfo={sharedData?.basic_info}
@@ -160,7 +156,7 @@ const App = () => {
           resumeBasicInfo={resumeData?.basic_info}
         />
 
-        <Footer sharedBasicInfo={sharedData?.basic_info ?? {}} />
+        <Footer sharedBasicInfo={sharedData?.basic_info} />
       </Suspense>
     </div>
   );

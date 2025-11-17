@@ -1,11 +1,12 @@
 import { FC } from "react";
+import { BasicInfo } from "../../types";
 
 interface FooterProps {
-  sharedBasicInfo: any;
+  sharedBasicInfo?: BasicInfo;
 }
 
 const Footer: FC<FooterProps> = ({ sharedBasicInfo }) => {
-  const networks = sharedBasicInfo?.social?.map((network: any) => (
+  const networks = sharedBasicInfo?.social?.map((network) => (
     <span key={network.name} className="m-4">
       <a href={network.url} target="_blank" rel="noopener noreferrer">
         <i className={network.class}></i>

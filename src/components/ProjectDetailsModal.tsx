@@ -18,7 +18,7 @@ interface ProjectDetailsModalProps {
     images?: string[];
   };
   onHide: () => void;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 const ProjectDetailsModal: FC<ProjectDetailsModalProps> = ({
@@ -45,7 +45,7 @@ const ProjectDetailsModal: FC<ProjectDetailsModalProps> = ({
     <Modal
       {...modalProps}
       centered
-      size="xl"
+      size="lg"
       dialogClassName="modal-90w"
       aria-labelledby="project-details-modal"
       className="modal-inside"

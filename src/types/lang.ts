@@ -2,6 +2,7 @@ export interface Lang {
   basic_info: BasicInfo;
   projects:   Project[];
   experience: Experience[];
+  menu?: Menu[];
 }
 
 export interface BasicInfo {
@@ -37,4 +38,8 @@ export interface Project {
 export interface Technology {
   class: string;
   name:  string;
+}
+
+export interface Menu {
+  name: string
 }

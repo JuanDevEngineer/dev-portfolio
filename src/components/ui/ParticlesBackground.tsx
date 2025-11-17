@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 
-import { MoveDirection, type Container, type ISourceOptions } from "@tsparticles/engine";
+import { MoveDirection, type ISourceOptions } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 
 import bootstrapicon from "../../assets/particles/logo-bootstrap.svg"

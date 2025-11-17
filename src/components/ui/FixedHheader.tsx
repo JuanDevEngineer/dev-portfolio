@@ -2,9 +2,11 @@ import { useLayoutEffect, useState, type FC } from "react";
 import { Icon } from "@iconify/react";
 import ReactSwitch from "react-switch";
 
-import useAppStore from "../store/useAppStore";
+import useAppStore from "../../store/useAppStore";
+import { Menu } from "../../types/lang";
 
 interface FixedHeaderProps {
+  resumeData?: Menu[];
   scroll: boolean;
   onThemeSwitchChange: () => void;
   applyPickedLanguage: (
@@ -14,6 +16,7 @@ interface FixedHeaderProps {
 }
 
 const FixedHeader: FC<FixedHeaderProps> = ({
+  resumeData,
   scroll,
   onThemeSwitchChange,
   applyPickedLanguage,
@@ -29,7 +32,7 @@ const FixedHeader: FC<FixedHeaderProps> = ({
     if (scroll) {
       setTimeout(() => {
         applyPickedLanguage(language, languageIconId);
-      }, 20);
+      }, 200);
     }
   }, [scroll, language, languageIconId]);
 
@@ -70,7 +73,7 @@ const FixedHeader: FC<FixedHeaderProps> = ({
               className="text-decoration-none text-dark"
               style={{ fontSize: "1.2rem" }}
             >
-              About Me
+              {resumeData?.[0]?.name ?? ""}
             </a>
           </li>
           <li>
@@ -79,7 +82,7 @@ const FixedHeader: FC<FixedHeaderProps> = ({
               className="text-decoration-none text-dark"
               style={{ fontSize: "1.2rem" }}
             >
-              Projects
+              {resumeData?.[1]?.name ?? ""}
             </a>
           </li>
           <li>
@@ -88,7 +91,7 @@ const FixedHeader: FC<FixedHeaderProps> = ({
               className="text-decoration-none text-dark"
               style={{ fontSize: "1.2rem" }}
             >
-              Skills
+              {resumeData?.[2]?.name ?? ""}
             </a>
           </li>
         </ul>

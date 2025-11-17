@@ -3,10 +3,11 @@ import { FC, useState, useEffect, useMemo } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import ReactSwitch from "react-switch";
 import { Icon } from "@iconify/react";
-import useAppStore from "../store/useAppStore";
+import useAppStore from "../../store/useAppStore";
+import { BasicInfo } from "../../types";
 
 interface HeaderProps {
-  sharedData: any;
+  sharedData?: BasicInfo;
   applyPickedLanguage: (
     pickedLanguage: string,
     oppositeLangIconId: string
@@ -24,8 +25,7 @@ const Header: FC<HeaderProps> = ({ sharedData, applyPickedLanguage, changeThme }
 
   useEffect(() => {
     if (sharedData) {
-      const mappedTitles =
-        sharedData?.titles?.map((title: string) => title.toUpperCase()) ?? [];
+      const mappedTitles = sharedData?.titles?.map((title: string) => title.toUpperCase()) ?? [];
       setTitles(mappedTitles);
     }
   }, [sharedData]);
@@ -56,7 +56,10 @@ const Header: FC<HeaderProps> = ({ sharedData, applyPickedLanguage, changeThme }
 
   return (
     <header id="home" style={{ height: '100vh', display: "block" }}>
-      <div className="row aligner" style={{ height: "100%" }}>
+      <div
+        className="row aligner" 
+        style={{ height: "100%" }} 
+      >
         <div className="col-md-12">
           <div>
             <Icon
@@ -69,7 +72,7 @@ const Header: FC<HeaderProps> = ({ sharedData, applyPickedLanguage, changeThme }
               {/* <Typical steps={[name]} wrapper="p" /> */}
               <p>
                 <Typewriter
-                  words={[sharedData.name]} // Puede ser solo 1 palabra o varias
+                  words={[sharedData!.name]} // Puede ser solo 1 palabra o varias
                 />
               </p>
             </h1>

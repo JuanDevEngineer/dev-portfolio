@@ -25,3 +25,16 @@ export interface Icon {
   class: string;
   level: string;
 }
+
+export interface ResumeInfo {
+    description_header: string;
+    description:        string;
+    section_name:       SectionName;
+}
+
+export interface SectionName {
+    about:      string;
+    projects:   string;
+    skills:     string;
+    experience: string;
+}

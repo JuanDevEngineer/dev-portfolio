@@ -1,10 +1,11 @@
 import { FC } from "react";
 
 import { Icon } from "@iconify/react";
+import { Icon as IconInfo, ResumeInfo } from "../types";
 
 interface SkillsProps {
-  sharedSkills: any;
-  resumeBasicInfo: any;
+  sharedSkills?: { icons: IconInfo[] };
+  resumeBasicInfo?: ResumeInfo;
 }
 
 const Skills: FC<SkillsProps> = ({ sharedSkills, resumeBasicInfo }) => {
@@ -14,15 +15,15 @@ const Skills: FC<SkillsProps> = ({ sharedSkills, resumeBasicInfo }) => {
 
   const sectionName = resumeBasicInfo.section_name.skills;
 
-  const skills = sharedSkills.icons.map((skill, i) => (
-    <li className="list-inline-item mx-3" key={i}>
+  const skills = sharedSkills.icons.map((skill: IconInfo, i: number) => (
+    <div key={i}>
       <span>
         <div className="text-center skills-title">
           <Icon icon={skill.class} width="90" height="90" />
           <p className="text-center">{skill.name}</p>
         </div>
       </span>
-    </li>
+    </div>
   ));
 
   return (
@@ -33,9 +34,7 @@ const Skills: FC<SkillsProps> = ({ sharedSkills, resumeBasicInfo }) => {
             <span className="skills-text underline">{sectionName}</span>
           </h1>
         </div>
-        <div className="col-md-12 text-center">
-          <ul className="list-inline mx-auto skill-icon">{skills}</ul>
-        </div>
+        <div className="skills-list">{skills}</div>
       </div>
     </section>
   );
