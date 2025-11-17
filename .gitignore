@@ -23,4 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
+# no subir los .env
 .env
