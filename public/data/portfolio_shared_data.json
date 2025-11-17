@@ -59,11 +59,6 @@
         "level": "85"
       },
       {
-        "name": "Java",
-        "class": "devicon:java",
-        "level": "65"
-      },
-      {
         "name": "MySql",
         "class": "logos:mysql-icon",
         "level": "60"
@@ -76,6 +71,16 @@
       {
         "name": "Nextjs",
         "class": "devicon:nextjs",
+        "level": "60"
+      },
+      {
+        "name": "Tailwindcss",
+        "class": "vscode-icons:file-type-tailwind",
+        "level": "60"
+      },
+      {
+        "name": "Mongodb",
+        "class": "skill-icons:mongodb",
         "level": "60"
       }
     ]
